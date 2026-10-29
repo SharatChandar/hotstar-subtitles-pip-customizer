@@ -1,0 +1,41 @@
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+.aws/
+
+# Local agent, editor and OS files
+.agents/
+.codex/
+.cursor/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Dependencies, caches and generated release/test artifacts
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+coverage/
+test-results/
+tests/generated/
+playwright-report/
+dist/
+build/
+*.zip
+*.crx
+*.log
+*.tsbuildinfo

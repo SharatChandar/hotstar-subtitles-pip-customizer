@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Hotstar Subtitle Studio",
+  "version": "1.0.0",
+  "homepage_url": "https://github.com/SharatChandar/hotstar-subtitles-pip-customizer",
+  "description": "Fine-tune Hotstar subtitles: typography, spacing, color, backgrounds, outlines and placement.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": { "default_title": "Subtitle Studio", "default_popup": "popup.html", "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png" } },
+  "content_scripts": [{
+    "matches": ["https://hotstar.com/*", "https://*.hotstar.com/*"],
+    "js": ["shared.js", "controls.js", "pip.js", "content.js"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }]
+}
